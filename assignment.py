@@ -74,7 +74,7 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
-    return(list1 & list2)
+    return set(list1).intersection(set(list2))
 
 def arithmetic_ops(a, b):
     """
