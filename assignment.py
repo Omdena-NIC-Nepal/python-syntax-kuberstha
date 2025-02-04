@@ -18,11 +18,11 @@ def conditional_check(number):
         str: "Greater", "Lesser", or "Equal"
     """
     if number > 10:
-        print("Greater")
+        return("Greater")
     elif number <10:
-        print("Lesser")
+        return("Lesser")
     else:
-        print("Equal")
+        return("Equal")
 
 def loop_sum(n):
     """
@@ -74,8 +74,6 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
-    list1 = {1,2,3}
-    list2 = {3,5,6}
     return(list1 & list2)
 
 def arithmetic_ops(a, b):
@@ -87,11 +85,12 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    sum_ = a + b
-    diff = a - b
-    mult = a * b
-    quot = a // b 
-    return (sum_, diff, mult,quot)
+    return {
+        "addition": a + b,
+        "subtraction": a - b,
+        "multiplication": a * b,
+        "division": a / b if b != 0 else "undefined"
+    }
 
 def logical_ops(x, y):
     """
